@@ -15,7 +15,10 @@ struct LoginView: View {
     var body: some View {
         NavigationView {
             VStack {
-                HeaderView()
+                HeaderView(title: "To Do List",
+                           subtitle: "Get things done",
+                           angle: 15,
+                           backgoround: .pink)
                 Form {
                     TextField("Email Address", text: $email)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -33,7 +36,9 @@ struct LoginView: View {
                                 .bold()
                         }
                     }
+                    .padding()
                 }
+                .offset(y: -50)
                 
                 VStack {
                     Text("New around here?")
